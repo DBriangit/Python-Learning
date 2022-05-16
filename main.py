@@ -298,3 +298,168 @@ print(15 + 20)
 #Python Lists
 thislist = ["apple", "banana", "cherry"]
 print(thislist)
+
+thistlist = ["apple", "banana", "cherry"]
+print(len(thislist))
+
+
+list1 = ["strawberry", "grape", "watermelon"]
+list2 = [1, 5, 7, 9, 3] 
+list3 = [True, False, False]
+
+print(list1)
+print(list2)
+print(list3)
+
+list1 = ["abc", 34, True, 40, "male"]
+print(list1)
+
+
+mylist = ["apple", "Banana", "Cherry"]
+print(type(mylist))
+
+#It is also possible to use the list() constructor when creating a new list.
+thislist = list(("pineapple", "Orange", "Avocado"))
+print(thislist)
+
+
+thislist = ["pineapple", "orange", "avocado"]
+print(thislist[1])
+
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+#This will return the items from position 2 to 5.
+
+#Remember that the first item is position 0,
+#and note that the item in position 5 is NOT included
+
+
+thislist = ["orange", "kiwi", "melon", "mango", "Dragon fruit"]
+print(thislist[:4])
+#This will return the items from index 0 to index 4.
+
+#Remember that index 0 is the first item, and index 4 is the fifth item
+#Remember that the item in index 4 is NOT 
+
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+
+#This will return the items from index 2 to the end.
+
+#Remember that index 0 is the first item, and index 2 is the third
+
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+#Negative indexing means starting from the end of the list.
+
+#This example returns the items from index -4 (included) to index -1 (excluded)
+
+#Remember that the last item has the index -1,
+
+
+thislist = ["cherry", "orange", "kiwi"]
+if "orange" in thislist:
+    print("Yes, 'orange' is in the fruit list.")
+else:
+    print("No!")
+    
+
+#To change the value of a specific item, refer to the index number:
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+
+thislist[1:3] = ["blackcurrant", "watermelon"]
+
+print(thislist)
+
+
+list = ["apel", "pisang", "manggis"]
+list.insert(2, "semangka")
+print(list)
+
+
+listmakanan = ["indomie", "ramen", "snack"]
+listmakanan.append("jeruk")
+print(listmakanan)
+
+
+listbuah = ["kedondong", "leci", "rambutan"]
+listmakanan1 = ["chicken", "steak", "frenchfries"]
+
+listbuah.extend(listmakanan1)
+print(listbuah)
+
+
+listmakanan2 = ["KFC", "A&W", "McDonald's"]
+listmakanan2.remove("McDonald's")
+print(listmakanan2)
+
+#The pop() method removes the specified index.
+listmakanan2 = ["KFC", "A&W", "McDonald's"]
+listmakanan2.pop(1)
+print(listmakanan2)
+#OR
+#The del keyword also removes the specified index:
+listmakanan2 = ["KFC", "A&W", "McDonald's"]
+del listmakanan2[0]
+print(listmakanan2)
+
+#The clear() method empties the list.
+#The list still remains, but it has no content.
+listmakanan2 = ["KFC", "A&W", "McDonald's"]
+listmakanan2.clear()
+print(listmakanan2)
+
+#Python list, Loop Lists
+listminuman = ["Jus Alpukat", "Jus Jeruk", "Es Teh"]
+for x in listminuman:
+    print(x)
+
+#You can also loop through the list items by referring to their index number.
+listminuman2 = ["Nu Green Tea", "Aqua", "Pocari Sweat"]
+for i in range(len(listminuman2)):
+    print(listminuman2[i])
+
+#You can loop through the list items by using a while loop.
+#Use the len() function to determine the length of the list, then start at 0 and loop your way through the list items by refering to their indexes.
+#Remember to increase the index by 1 after each iteration.
+makanan = ["Mie Pangsit", "Mie Ayam", "Ayam Goreng Ismail"]
+i = 1
+while i < len(makanan):
+    print(makanan)
+    i = i + 1
+#SEDIKIT MEMBINGUNGKAN
+
+
+makanan = ["Mie Pangsit", "Mie Ayam", "Ayam Goreng Ismail"]
+[print(y) for y in makanan]
+
+
+#List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+#Example:
+#Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+#Without list comprehension you will have to write a for statement with a conditional test inside:
+
+#Complicated Code
+fruits = ["Durian", "Kelengkeng", "Pepaya"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+
+#Simple Code
+fruits = ["Kiwi", "Leci", "Sirsak", "Mangga", "pisang"]
+newlist = [x for x in fruits if "i" in x]
+
+print(newlist)
