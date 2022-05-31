@@ -463,3 +463,120 @@ fruits = ["Kiwi", "Leci", "Sirsak", "Mangga", "pisang"]
 newlist = [x for x in fruits if "i" in x]
 
 print(newlist)
+
+
+#With list comprehension you can do all that with only one line of code
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if x != "apple"]
+print(newlist)
+
+
+newlist = [x for x in range(10)]
+print(newlist)
+
+newlist = [x for x in range(10) if x < 5]
+print(newlist)
+
+
+fruits1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits1]
+
+print(newlist)
+
+fruits2 = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = ['hello' for x in fruits2]
+
+print(newlist)
+
+
+fruits3 = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist= [x if x != "apple" else "durian" for x in fruits3]
+
+print(newlist)
+
+
+#Python list, Sort List
+#List objects have a sort() method that will sort the list alphanumerically, ascending, by default:
+listbuah3 = ["orange", "mango", "kiwi", "pineapple", "banana"]
+listbuah3.sort()
+
+print(listbuah3)
+
+
+listangka = [100, 50, 200, 52, 20,65]
+listangka.sort()
+
+print(listangka)
+
+
+listbuah4 = ["orange", "mango", "kiwi", "pineapple", "banana"]
+listbuah4.sort(reverse = True)
+
+print(listbuah4)
+
+
+listangka1 = [100, 50, 200, 52, 20,65]
+listangka1.sort(reverse = True)
+
+print(listangka1)
+
+
+def myfunc(n):
+    return abs(n - 5)
+
+listangka2 = [200, 29, 60, 38, 49]
+listangka2.sort(key = myfunc)
+
+print(listangka2)
+
+
+#Case Insensitive Sort By default the sort() method is case sensitive, 
+#resulting in all capital letters being sorted before lower case letters:
+listbuah5 = ["banana", "Orange", "Kiwi", "cherry"]
+listbuah5.sort()
+
+print(listbuah5)
+
+
+listbuah5 = ["banana", "Orange", "Kiwi", "cherry"]
+listbuah5.sort(key = str.lower)
+
+print(listbuah5)
+
+
+listbuah6 = ["banana", "Orange", "Kiwi", "cherry"]
+listbuah6.reverse()
+
+print(listbuah6)
+
+
+#make a copy of a list with the copy() method :
+listbuah6 = ["apple", "banana", "cherry"]
+mylist1 = listbuah6.copy()
+
+print(mylist1)
+
+
+list4 = ["a", "b", "c"]
+list5 = [1, 2, 3]
+
+list6 = list4 + list5
+
+print(list6)
+
+
+listhuruf = ["d", "e", "f"]
+listangka3 = [4, 5, 6]
+
+for x in listhuruf:
+    listangka3.append(x)
+
+print(listangka3)
+#OR
+listhuruf = ["g", "h", "i"]
+listangka3 = [7, 8, 9]
+listangka3.extend(listhuruf)
+
+print(listangka3)
+
+#Python list, List Methods
