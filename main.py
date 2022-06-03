@@ -579,4 +579,51 @@ listangka3.extend(listhuruf)
 
 print(listangka3)
 
-#Python list, List Methods
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+
+#To determine how many items a tuple has, use the len() function:
+thistuple = ("apple", "banana", "cherry", "orange")
+print(len(thistuple))
+
+#To create a tuple with only one item, you have to add a comma after the item, 
+#otherwise Python will not recognize it as a tuple.
+thistuple = ("apple",)
+print(type(thistuple))
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+
+
+#Tuple items can be of any data type:
+tuple1 = ("banana", "durian", "cherry")
+tuple2 = (10, 11, 12, 13)
+tuple3 = (True, False, False)
+
+print(tuple1)
+print(tuple2)
+print(tuple3)
+
+
+tuple4 = ("abc", 24, True, 50, "male")
+print(tuple4)
+
+
+#You can access tuple items by referring to the index number, inside square brackets:
+thistuple = ("apple", "cherry", "banana")
+print(thistuple[1])
+#Negative Indexing
+thistuple = ("apple", "cherry", "banana")
+print(thistuple[-1])
+#OR
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[:5])
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[3:])
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-2])
+
+#Python tuples, Access Tuples
